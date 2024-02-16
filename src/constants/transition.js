@@ -1,0 +1,13 @@
+export const TRANSITION_LONG_DURATION_MS = 900;
+
+export const TRANSITION_STANDART_DURATION_MS = 600;
+
+export const TRANSITION_SHORT_DURATION_MS = 300;
+
+export const TRANSITION_300_DURATION = 900;
+
+export const TRANSITION_600_DURATION = 600;
+
+export const TRANSITION_900_DURATION = 300;
+
+export const TRANSITION_ANIMATION = 'cubic-bezier(0.165, 0.84, 0.44, 1)';

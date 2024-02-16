@@ -1,0 +1,44 @@
+name: Build and SSH deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4.1.1
+
+      - name: Install, lint, build 🔧
+        run: |
+          npm install
+          npm run lint
+          npm run build
+        env:
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
+
+      - name: Get public IP 🪐
+        id: ip
+        uses: haythem/public-ip@v1.3
+
+      - name: Add IP to whitelist 🪐
+        id: addip
+        run: |
+          curl -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.ADM_TOOLS_API_TOKEN }}" --request POST --data '{"account_id": "${{ secrets.ADM_TOOLS_ACCOUNT_ID }}", "ip": "${{ steps.ip.outputs.ipv4 }}"}' https://adm.tools/action/hosting/account/ssh/ip/send/
+
+      - name: Deploy to host 🚀
+        uses: burnett01/rsync-deployments@6.0.0
+        with:
+          switches: -avzr --delete
+          path: dist/
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.REMOTE_KEY }}
+          remote_path: ${{ secrets.REMOTE_PATH }}
+
+      - name: Remove IP from whitelist 🪐
+        id: removeip
+        run: |
+          curl -H "Content-Type: application/json" -H "Authorization: Bearer ${{ secrets.ADM_TOOLS_API_TOKEN }}" --request POST --data '{"account_id": "${{ secrets.ADM_TOOLS_ACCOUNT_ID }}", "ip": "${{ steps.ip.outputs.ipv4 }}"}' https://adm.tools/action/hosting/account/ssh/ip/delete_by_ip/
