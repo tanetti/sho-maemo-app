@@ -10,7 +10,7 @@ export const LinkList = styled.ul`
 
 export const LinkItem = styled.li`
   display: flex;
-  flex-basis: ${({ scrolled }) => (scrolled ? '44px' : '52px')};
+  flex-basis: ${({ scrolled }) => (scrolled ? '44px' : '50px')};
 
   aspect-ratio: 1;
 
@@ -19,7 +19,7 @@ export const LinkItem = styled.li`
   transition: ${createTransition('flex', 'standart')};
 
   @media screen and (min-width: 768px) {
-    flex-basis: ${({ scrolled }) => (scrolled ? '50px' : '60px')};
+    flex-basis: ${({ scrolled }) => (scrolled ? '50px' : '58px')};
   }
 `;
 

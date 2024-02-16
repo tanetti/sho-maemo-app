@@ -1,71 +1,109 @@
 import { SpriteIcon } from '@/components/Shared';
-import { INSTAGRAM, PHONE, LOCATION } from '@/constants';
+import { INSTAGRAM, PHONE, LOCATION, TELEGRAM, TIKTOK } from '@/constants';
 import {
-  ContactTitle,
   FooterContainer,
-  CopyrightContainer,
-  ContactContainer,
-  CopyrightText,
-  ContactList,
-  ContactLink,
-  SocialsList,
-  LinkContainer,
-  SocialLink,
+  IconLink,
+  IconLinkList,
+  Line,
+  Link,
+  LinkList,
+  LinkTtem,
+  MapFrame,
+  MobileTitle,
 } from './Footer.styled';
 
 export const Footer = () => (
   <FooterContainer id="footer">
-    <ContactContainer>
-      <ContactTitle>
-        {/* Залишились питання? <strong>Зв&apos;яжіться з нами!</strong> */}
-      </ContactTitle>
+    <div>
+      <MobileTitle>Як нас знайти:</MobileTitle>
 
-      <LinkContainer>
-        <SocialsList>
-          <li>
-            <SocialLink
-              href={INSTAGRAM.link}
+      <MapFrame
+        aria-label="Мапа Google"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1321.6708790899725!2d35.0738027!3d48.5075129!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d95863dea7dcef%3A0xf443223a8e2e416f!2sSho%20Maemo!5e0!3m2!1sen!2sua!4v1708089460230!5m2!1sen!2sua"
+        allowFullScreen={false}
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </div>
+
+    <div>
+      <LinkList>
+        <LinkTtem>
+          <address>
+            <Link
+              href={LOCATION.link}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={INSTAGRAM.aria}
             >
-              <SpriteIcon symbol="instagram" />
-            </SocialLink>
-          </li>
-        </SocialsList>
+              {LOCATION.label}
+            </Link>
+          </address>
+        </LinkTtem>
 
-        <ContactList>
-          <li>
-            <ContactLink href={PHONE.link} aria-label={PHONE.aria}>
-              <SpriteIcon symbol="phone" />
+        <LinkTtem>
+          <Link href={PHONE.link}>{PHONE.label}</Link>
+        </LinkTtem>
 
-              <span>{PHONE.label}</span>
-            </ContactLink>
-          </li>
+        <LinkTtem>
+          <Link href={INSTAGRAM.link} target="_blank" rel="noopener noreferrer">
+            {INSTAGRAM.label}
+          </Link>
+        </LinkTtem>
+      </LinkList>
 
-          <li>
-            <address>
-              <ContactLink
-                href={LOCATION.link}
-                aria-label={LOCATION.aria}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SpriteIcon symbol="location" />
+      <Line />
 
-                <span>{LOCATION.label}</span>
-              </ContactLink>
-            </address>
-          </li>
-        </ContactList>
-      </LinkContainer>
-    </ContactContainer>
+      <IconLinkList>
+        <li>
+          <IconLink
+            href={INSTAGRAM.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={INSTAGRAM.aria}
+          >
+            <SpriteIcon symbol="instagram" />
+          </IconLink>
+        </li>
 
-    <CopyrightContainer>
-      <CopyrightText>
-        <span>&nbsp;</span>
-        Всі права захищено &#169; 2024
-      </CopyrightText>
-    </CopyrightContainer>
+        <li>
+          <IconLink
+            href={LOCATION.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={LOCATION.aria}
+          >
+            <SpriteIcon symbol="location" />
+          </IconLink>
+        </li>
+
+        <li>
+          <IconLink
+            href={TELEGRAM.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={TELEGRAM.aria}
+          >
+            <SpriteIcon symbol="telegram" />
+          </IconLink>
+        </li>
+
+        <li>
+          <IconLink href={PHONE.link} aria-label={PHONE.aria}>
+            <SpriteIcon symbol="phone" />
+          </IconLink>
+        </li>
+
+        <li>
+          <IconLink
+            href={TIKTOK.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={TIKTOK.aria}
+          >
+            <SpriteIcon symbol="tiktok" />
+          </IconLink>
+        </li>
+      </IconLinkList>
+    </div>
   </FooterContainer>
 );

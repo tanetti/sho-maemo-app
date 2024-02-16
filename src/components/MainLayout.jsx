@@ -1,25 +1,33 @@
-import { Suspense } from 'react';
+import axios from 'axios';
+import { Suspense, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
+import { API_URL } from '@/constants';
 import { Header, Footer } from '@/components';
 
-const MainLayout = () => (
-  <>
-    <Header />
+const MainLayout = () => {
+  useEffect(() => {
+    axios.post(`${API_URL}/wakeup`);
+  }, []);
 
-    <main style={{ display: 'flex', flexDirection: 'column' }}>
-      <Suspense
-        fallback={
-          <div style={{ padding: 80, textAlign: 'center' }}>
-            Завантаження...
-          </div>
-        }
-      >
-        <Outlet />
-      </Suspense>
-    </main>
+  return (
+    <>
+      <Header />
 
-    <Footer />
-  </>
-);
+      <main style={{ display: 'flex', flexDirection: 'column' }}>
+        <Suspense
+          fallback={
+            <div style={{ padding: 80, textAlign: 'center' }}>
+              Завантаження...
+            </div>
+          }
+        >
+          <Outlet />
+        </Suspense>
+      </main>
+
+      <Footer />
+    </>
+  );
+};
 
 export default MainLayout;

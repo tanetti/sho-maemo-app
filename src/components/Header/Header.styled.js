@@ -11,7 +11,7 @@ export const HeaderContainer = styled.header`
   width: 100vw;
   margin-right: calc((100vw - 100%) * -1);
 
-  background-color: #000000;
+  background-color: #000;
 
   box-shadow: ${({ scrolled }) =>
     scrolled ? '0px -9px 8px 13px rgba(36, 36, 36, 0.82)' : 'none'};

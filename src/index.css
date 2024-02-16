@@ -22,8 +22,6 @@ body.modal {
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -56,6 +54,10 @@ a {
   text-decoration: none;
 
   -webkit-tap-highlight-color: transparent;
+}
+
+address {
+  font-style: normal;
 }
 
 button {

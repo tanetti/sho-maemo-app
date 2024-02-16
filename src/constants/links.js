@@ -6,18 +6,24 @@ export const PHONE = {
 
 export const LOCATION = {
   link: 'https://maps.app.goo.gl/jyTb5T7AE6Z7xM2X6',
-  label: 'Проспект Слобожанський 67, офіс 2',
-  aria: 'Проспект Слобожанський 67, офіс 2, Google Maps',
+  label: 'пр. Слобожанський 67, Офіс 2, Дніпро',
+  aria: 'пр. Слобожанський 67, Офіс 2, Дніпро, Google Maps',
 };
 
 export const INSTAGRAM = {
   link: 'https://www.instagram.com/sho.maemo.ua',
-  label: 'Instagram',
-  aria: 'Посилання до акаунту Instagram',
+  label: '@sho.maemo.ua',
+  aria: 'Посилання до акаунту Instagram @sho.maemo.ua',
 };
 
 export const TELEGRAM = {
   link: 'https://t.me/crcask',
   label: 'Telegram',
   aria: 'Посилання до чату Telegram',
+};
+
+export const TIKTOK = {
+  link: 'https://www.tiktok.com/@sho.maemo.ua',
+  label: 'TikTok',
+  aria: 'Посилання до акаунту TikTok',
 };
