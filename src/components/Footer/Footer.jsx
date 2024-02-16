@@ -1,12 +1,5 @@
 import { SpriteIcon } from '@/components/Shared';
-import {
-  FACEBOOK,
-  INSTAGRAM,
-  YOUTUBE,
-  PHONE,
-  MAIL,
-  LOCATION,
-} from '@/constants';
+import { INSTAGRAM, PHONE, LOCATION } from '@/constants';
 import {
   ContactTitle,
   FooterContainer,
@@ -18,29 +11,17 @@ import {
   SocialsList,
   LinkContainer,
   SocialLink,
-  SocialLinkYouTube,
 } from './Footer.styled';
 
 export const Footer = () => (
   <FooterContainer id="footer">
     <ContactContainer>
       <ContactTitle>
-        Залишились питання? <strong>Зв&apos;яжіться з нами!</strong>
+        {/* Залишились питання? <strong>Зв&apos;яжіться з нами!</strong> */}
       </ContactTitle>
 
       <LinkContainer>
         <SocialsList>
-          <li>
-            <SocialLink
-              href={FACEBOOK.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={FACEBOOK.aria}
-            >
-              <SpriteIcon symbol="facebook" />
-            </SocialLink>
-          </li>
-
           <li>
             <SocialLink
               href={INSTAGRAM.link}
@@ -51,17 +32,6 @@ export const Footer = () => (
               <SpriteIcon symbol="instagram" />
             </SocialLink>
           </li>
-
-          <li>
-            <SocialLinkYouTube
-              href={YOUTUBE.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={YOUTUBE.aria}
-            >
-              <SpriteIcon symbol="youtube" />
-            </SocialLinkYouTube>
-          </li>
         </SocialsList>
 
         <ContactList>
@@ -70,14 +40,6 @@ export const Footer = () => (
               <SpriteIcon symbol="phone" />
 
               <span>{PHONE.label}</span>
-            </ContactLink>
-          </li>
-
-          <li>
-            <ContactLink href={MAIL.link} aria-label={MAIL.aria}>
-              <SpriteIcon symbol="mail" />
-
-              <span>{MAIL.label}</span>
             </ContactLink>
           </li>
 
@@ -101,9 +63,7 @@ export const Footer = () => (
 
     <CopyrightContainer>
       <CopyrightText>
-        <span>
-          Дитячо-юнацька спортивна школа Слобожанської селищної ради.&nbsp;
-        </span>
+        <span>&nbsp;</span>
         Всі права захищено &#169; 2024
       </CopyrightText>
     </CopyrightContainer>

@@ -150,15 +150,6 @@ export const SocialLink = styled.a`
   }
 `;
 
-export const SocialLinkYouTube = styled(SocialLink)`
-  padding: 7px 7px;
-
-  & > svg {
-    width: 32px;
-    height: 32px;
-  }
-`;
-
 export const ContactList = styled.ul`
   display: flex;
 

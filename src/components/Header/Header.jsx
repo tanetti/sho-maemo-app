@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import throttle from 'lodash.throttle';
+import { HeaderLinks } from '@/components';
 import { SpriteIcon } from '@/components/Shared';
 import { SCROLL_THROTTLE_DELAY } from '@/constants';
 import { HeaderContainer, HeaderSizer, LogoLink } from './Header.styled';
@@ -26,13 +27,13 @@ export const Header = () => {
       <HeaderSizer scrolled={isScrolled}>
         <LogoLink
           to="/"
-          aria-label="Логотип ДЮСШ"
+          aria-label="Логотип Sho-Maemo"
           scrolled={isScrolled.toString()}
         >
           <SpriteIcon symbol="logo" />
         </LogoLink>
 
-        {/* <HeaderNavigation isScrolled={isScrolled} /> */}
+        <HeaderLinks scrolled={isScrolled} />
       </HeaderSizer>
     </HeaderContainer>
   );

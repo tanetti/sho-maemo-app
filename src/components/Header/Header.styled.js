@@ -44,11 +44,12 @@ export const HeaderSizer = styled.div`
 
 export const LogoLink = styled(NavLink)`
   display: flex;
+  flex-shrink: 0;
   flex-basis: ${({ scrolled }) => (scrolled === 'true' ? '44px' : '60px')};
 
   aspect-ratio: 1/1.07;
 
-  color: #fff;
+  color: #ffde00;
 
   transition: ${createTransition(['color', 'flex'], 'standart')};
 
@@ -61,15 +62,11 @@ export const LogoLink = styled(NavLink)`
     fill: currentColor;
   }
 
-  &:is(:hover, :focus) {
-    color: #fa5502;
+  &:is(:hover, :focus-visible) {
+    color: #ffbf00;
   }
 
   @media screen and (min-width: 768px) {
     flex-basis: ${({ scrolled }) => (scrolled === 'true' ? '60px' : '80px')};
-  }
-
-  @media screen and (min-width: 1280px) {
-    flex-basis: ${({ scrolled }) => (scrolled === 'true' ? '70px' : '120px')};
   }
 `;

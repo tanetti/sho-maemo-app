@@ -1,35 +1,23 @@
 export const PHONE = {
-  link: 'tel:+380689079646',
-  label: '+38 (068) 907-96-46',
-  aria: 'Подзвонити на номер +38 (068) 907-96-46',
-};
-
-export const MAIL = {
-  link: 'mailto:dyussh.ssr@gmail.com',
-  label: 'dyussh.ssr@gmail.com',
-  aria: 'Почати листування з dyussh.ssr@gmail.com',
+  link: 'tel:+380668844588',
+  label: '+38 (066) 88-445-88',
+  aria: 'Подзвонити на номер +38 (066) 88-445-88',
 };
 
 export const LOCATION = {
-  link: 'https://maps.app.goo.gl/nejgGh2bNBQMHvvBA',
-  label: 'Слобожанське, вулиця Спортивна 4',
-  aria: 'Слобожанське, вулиця Спортивна 4, Google Maps',
-};
-
-export const FACEBOOK = {
-  link: 'https://www.facebook.com/Slobozhanskedyussh',
-  label: 'Facebook',
-  aria: 'Посилання до акаунту Facebook',
+  link: 'https://maps.app.goo.gl/jyTb5T7AE6Z7xM2X6',
+  label: 'Проспект Слобожанський 67, офіс 2',
+  aria: 'Проспект Слобожанський 67, офіс 2, Google Maps',
 };
 
 export const INSTAGRAM = {
-  link: 'https://www.instagram.com/dyusshslob',
+  link: 'https://www.instagram.com/sho.maemo.ua',
   label: 'Instagram',
   aria: 'Посилання до акаунту Instagram',
 };
 
-export const YOUTUBE = {
-  link: 'https://www.youtube.com/@dyussh_slobozganske',
-  label: 'YouTube',
-  aria: 'Посилання до каналу YouTube',
+export const TELEGRAM = {
+  link: 'https://t.me/crcask',
+  label: 'Telegram',
+  aria: 'Посилання до чату Telegram',
 };
