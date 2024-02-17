@@ -26,7 +26,6 @@ export const HeaderSizer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  margin: 0 auto;
   padding: 10px 8px;
 
   @media screen and (min-width: 960px) {
@@ -35,11 +34,10 @@ export const HeaderSizer = styled.div`
 `;
 
 export const LogoLink = styled(NavLink)`
-  display: flex;
+  display: block;
+
   flex-shrink: 0;
   flex-basis: ${({ scrolled }) => (scrolled === 'true' ? '44px' : '60px')};
-
-  aspect-ratio: 1/1.07;
 
   color: #ffde00;
 
@@ -49,7 +47,7 @@ export const LogoLink = styled(NavLink)`
     display: block;
 
     width: 100%;
-    max-height: 100%;
+    aspect-ratio: 1;
 
     fill: currentColor;
   }

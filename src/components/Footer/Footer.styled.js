@@ -123,7 +123,7 @@ export const IconLink = styled.a`
     display: block;
 
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1;
 
     fill: currentColor;
   }

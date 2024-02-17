@@ -9,12 +9,7 @@ export const LinkList = styled.ul`
 `;
 
 export const LinkItem = styled.li`
-  display: flex;
   flex-basis: ${({ scrolled }) => (scrolled ? '44px' : '50px')};
-
-  aspect-ratio: 1;
-
-  padding: 6px 6px;
 
   transition: ${createTransition('flex', 'standart')};
 
@@ -24,15 +19,19 @@ export const LinkItem = styled.li`
 `;
 
 export const HeaderLink = styled.a`
-  flex-basis: 100%;
+  display: block;
+
+  padding: 6px 6px;
 
   color: #ffde00;
 
   transition: ${createTransition('color', 'standart')};
 
   & > svg {
-    max-width: 100%;
-    max-height: 100%;
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 1;
 
     fill: currentColor;
   }
