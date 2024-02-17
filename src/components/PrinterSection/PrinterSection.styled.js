@@ -32,6 +32,7 @@ export const SectionContainer = styled.section`
 
   min-height: 480px;
   height: calc(100svh - 80px);
+  margin-bottom: 30px;
 
   @media screen and (min-width: 960px) {
     min-height: 580px;

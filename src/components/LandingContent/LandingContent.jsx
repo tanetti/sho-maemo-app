@@ -1,4 +1,4 @@
-import { PrinterSection } from '@/components';
+import { PcSection, PrinterSection } from '@/components';
 
 export const LandingContent = () => (
   <>
@@ -8,5 +8,7 @@ export const LandingContent = () => (
     </h1>
 
     <PrinterSection />
+
+    <PcSection />
   </>
 );
