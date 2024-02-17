@@ -4,7 +4,7 @@ import { createTransition } from '@/utilities';
 export const FooterContainer = styled.footer`
   justify-self: flex-end;
 
-  padding: 15px 12px;
+  padding: 40px 12px;
 
   color: #fff;
   background-color: #000;
@@ -14,7 +14,7 @@ export const FooterContainer = styled.footer`
   @media screen and (min-width: 960px) {
     display: flex;
 
-    padding: 20px;
+    padding: 60px;
 
     & > div {
       flex-grow: 1;
@@ -138,8 +138,4 @@ export const Copyright = styled.p`
   font-size: 12px;
 
   text-align: center;
-
-  @media screen and (max-width: 959.98px) {
-    margin-bottom: 18px;
-  }
 `;
