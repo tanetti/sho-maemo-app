@@ -8,7 +8,6 @@ import {
   Line,
   Link,
   LinkList,
-  LinkTtem,
   MapFrame,
   MobileTitle,
   TabletTitle,
@@ -35,7 +34,7 @@ export const Footer = () => {
         <TabletTitle>Як нас знайти:</TabletTitle>
 
         <LinkList>
-          <LinkTtem>
+          <li>
             <address>
               <Link
                 href={LOCATION.link}
@@ -45,13 +44,13 @@ export const Footer = () => {
                 {LOCATION.label}
               </Link>
             </address>
-          </LinkTtem>
+          </li>
 
-          <LinkTtem>
+          <li>
             <Link href={PHONE.link}>{PHONE.label}</Link>
-          </LinkTtem>
+          </li>
 
-          <LinkTtem>
+          <li>
             <Link
               href={INSTAGRAM.link}
               target="_blank"
@@ -59,7 +58,7 @@ export const Footer = () => {
             >
               {INSTAGRAM.label}
             </Link>
-          </LinkTtem>
+          </li>
         </LinkList>
 
         <Line />

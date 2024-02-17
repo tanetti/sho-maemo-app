@@ -56,11 +56,13 @@ export const MapFrame = styled.iframe`
   width: 100%;
   max-width: 480px;
   margin-inline: auto;
+
   aspect-ratio: 2/1;
 
-  border-width: 1px;
-  border-style: solid;
+  border-width: 0;
   border-radius: 8px;
+
+  outline: transparent;
 
   @media screen and (min-width: 960px) {
     max-width: 1440px;
@@ -71,16 +73,15 @@ export const MapFrame = styled.iframe`
 `;
 
 export const LinkList = styled.ul`
-  padding-block: 15px;
   margin-bottom: 4px;
-`;
-
-export const LinkTtem = styled.ul`
-  text-align: center;
+  padding-block: 15px;
 `;
 
 export const Link = styled.a`
   display: block;
+
+  width: fit-content;
+  margin-inline: auto;
   padding-block: 3px;
 
   color: inherit;
