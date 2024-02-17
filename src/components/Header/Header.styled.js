@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { createTransition } from '@/utilities';
 
 export const HeaderContainer = styled.header`
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;

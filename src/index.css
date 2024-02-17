@@ -6,6 +6,8 @@ body {
   min-width: 320px;
   width: 100svw;
 
+  background-color: #000;
+
   overflow-y: auto;
   overflow-x: hidden;
 
@@ -43,7 +45,13 @@ body.modal {
 main {
   flex-grow: 1;
 
+  padding-top: 80px;
+
   background-color: #fff;
+
+  @media screen and (min-width: 960px) {
+    padding-top: 100px;
+  }
 }
 
 h1,

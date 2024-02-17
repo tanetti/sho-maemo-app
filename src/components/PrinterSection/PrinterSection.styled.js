@@ -8,6 +8,11 @@ import PrinterJpg360x1 from '@/assets/printer/printer360x1.jpg';
 import PrinterJpg360x2 from '@/assets/printer/printer360x2.jpg';
 import PrinterJpg360x3 from '@/assets/printer/printer360x3.jpg';
 
+import PrinterWebp640x1 from '@/assets/printer/printer640x1.webp';
+import PrinterWebp640x2 from '@/assets/printer/printer640x2.webp';
+import PrinterJpg640x1 from '@/assets/printer/printer640x1.jpg';
+import PrinterJpg640x2 from '@/assets/printer/printer640x2.jpg';
+
 import SheetWebp480x1 from '@/assets/sheet/sheet480x1.webp';
 import SheetWebp480x2 from '@/assets/sheet/sheet480x2.webp';
 import SheetWebp480x3 from '@/assets/sheet/sheet480x3.webp';
@@ -29,11 +34,12 @@ export const SectionContainer = styled.section`
   min-height: 480px;
   height: calc(100svh - 80px);
 
-  will-change: height;
+  /* will-change: height;
 
-  transition: ${createTransition('height', 'standart')};
+  transition: ${createTransition('height', 'standart')}; */
 
   @media screen and (min-width: 960px) {
+    min-height: 580px;
     height: calc(100svh - 100px);
   }
 `;
@@ -44,6 +50,10 @@ export const HeadContainer = styled.div`
 
   flex-grow: 1;
   flex-basis: 56%;
+
+  @media screen and (min-width: 960px) {
+    flex-direction: row;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -69,6 +79,28 @@ export const ImageContainer = styled.div`
     background-image: ${`url(${PrinterJpg360x3})`};
     background-image: ${`url(${PrinterWebp360x3})`};
   }
+
+  @media screen and (min-width: 960px) {
+    flex-basis: 50%;
+
+    background-size: 640px;
+    background-image: ${`url(${PrinterJpg640x1})`};
+    background-image: ${`url(${PrinterWebp640x1})`};
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: ${`url(${PrinterJpg640x2})`};
+      background-image: ${`url(${PrinterWebp640x2})`};
+    }
+
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      background-image: ${`url(${PrinterJpg640x2})`};
+      background-image: ${`url(${PrinterWebp640x2})`};
+    }
+  }
 `;
 
 export const DescriptionContainer = styled.p`
@@ -82,6 +114,10 @@ export const DescriptionContainer = styled.p`
 
   & > span {
     font-weight: 700;
+  }
+
+  @media screen and (min-width: 960px) {
+    flex-basis: 50%;
   }
 `;
 
