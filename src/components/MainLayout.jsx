@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import { API_URL } from '@/constants';
 import { Header, Footer } from '@/components';
 
-const MainLayout = () => {
+export const MainLayout = () => {
   useEffect(() => {
     axios.post(`${API_URL}/wakeup`);
   }, []);
@@ -29,5 +29,3 @@ const MainLayout = () => {
     </>
   );
 };
-
-export default MainLayout;

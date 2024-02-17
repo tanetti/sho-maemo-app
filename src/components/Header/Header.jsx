@@ -27,6 +27,7 @@ export const Header = () => {
       <HeaderSizer>
         <LogoLink
           to="/"
+          onClickCapture={() => scroll({ top })}
           aria-label="Логотип Sho-Maemo"
           scrolled={isScrolled.toString()}
         >
