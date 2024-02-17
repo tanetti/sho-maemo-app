@@ -30,7 +30,7 @@ export const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
 
-  min-height: 480px;
+  min-height: 520px;
   height: calc(100svh - 80px);
   margin-bottom: 30px;
 
@@ -129,9 +129,11 @@ export const RequestContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 14%;
+  gap: max(14%, 30px);
   flex-grow: 1;
   flex-basis: 44%;
+
+  padding-block: 30px;
 
   background-repeat: no-repeat;
   background-size: cover;
