@@ -230,6 +230,21 @@ export const RequestContainer = styled.div`
         ${`url(${SheetWebp960x3})`};
     }
   }
+
+  @media screen and (min-width: 960px) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)
+      ),
+      ${`url(${SheetJpg960x3})`};
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)
+      ),
+      ${`url(${SheetWebp960x3})`};
+  }
 `;
 
 export const Caption = styled.div`
