@@ -18,7 +18,7 @@ export const LinkItem = styled.li`
 
   transition: ${createTransition('flex', 'standart')};
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     flex-basis: ${({ scrolled }) => (scrolled ? '50px' : '58px')};
   }
 `;

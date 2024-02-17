@@ -4,17 +4,22 @@ import { createTransition } from '@/utilities';
 export const FooterContainer = styled.footer`
   justify-self: flex-end;
 
-  padding: 15px;
+  padding: 15px 12px;
 
   color: #fff;
   background-color: #000;
 
   box-shadow: 0px 12px 8px 13px rgba(36, 36, 36, 0.82);
 
-  /* @media screen and (min-width: 960px) {
+  @media screen and (min-width: 960px) {
     display: flex;
-    flex-direction: row-reverse;
-  } */
+
+    padding: 20px;
+
+    & > div {
+      flex-grow: 1;
+    }
+  }
 `;
 
 export const MobileTitle = styled.p`
@@ -32,6 +37,19 @@ export const MobileTitle = styled.p`
   }
 `;
 
+export const TabletTitle = styled.p`
+  display: none;
+
+  @media screen and (min-width: 960px) {
+    display: block;
+
+    font-size: 32px;
+    font-weight: 600;
+
+    text-align: center;
+  }
+`;
+
 export const MapFrame = styled.iframe`
   display: block;
 
@@ -43,6 +61,13 @@ export const MapFrame = styled.iframe`
   border-width: 1px;
   border-style: solid;
   border-radius: 8px;
+
+  @media screen and (min-width: 960px) {
+    max-width: 1440px;
+    height: 100%;
+
+    aspect-ratio: auto;
+  }
 `;
 
 export const LinkList = styled.ul`
@@ -82,6 +107,7 @@ export const IconLinkList = styled.ul`
   gap: 20px;
 
   padding-block: 20px;
+  margin-bottom: 10px;
 `;
 
 export const IconLink = styled.a`
@@ -104,5 +130,15 @@ export const IconLink = styled.a`
 
   &:is(:hover, :focus-visible) {
     color: #ffde00;
+  }
+`;
+
+export const Copyright = styled.p`
+  font-size: 12px;
+
+  text-align: center;
+
+  @media screen and (max-width: 959.98px) {
+    margin-bottom: 18px;
   }
 `;

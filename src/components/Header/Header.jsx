@@ -24,7 +24,7 @@ export const Header = () => {
 
   return (
     <HeaderContainer scrolled={isScrolled}>
-      <HeaderSizer scrolled={isScrolled}>
+      <HeaderSizer>
         <LogoLink
           to="/"
           aria-label="Логотип Sho-Maemo"

@@ -4,11 +4,10 @@ html {
 
 body {
   min-width: 320px;
-  min-height: 100dvh;
+  width: 100svw;
+
   overflow-y: auto;
   overflow-x: hidden;
-
-  margin-right: calc((100vw - 100%) * -1);
 
   scroll-behavior: smooth;
 }
@@ -34,7 +33,7 @@ body.modal {
   display: flex;
   flex-direction: column;
 
-  min-height: 100dvh;
+  min-height: 100svh;
 }
 
 main {

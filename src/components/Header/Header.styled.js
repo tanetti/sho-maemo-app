@@ -8,9 +8,6 @@ export const HeaderContainer = styled.header`
   left: 0;
   z-index: 1000;
 
-  width: 100vw;
-  margin-right: calc((100vw - 100%) * -1);
-
   background-color: #000;
 
   box-shadow: ${({ scrolled }) =>
@@ -18,7 +15,6 @@ export const HeaderContainer = styled.header`
 
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-color: ${({ scrolled }) => (scrolled ? '#000000da' : 'transparent')};
 
   transition: ${createTransition(
     ['background-color', 'border-color', 'box-shadow'],
@@ -33,12 +29,8 @@ export const HeaderSizer = styled.div`
   margin: 0 auto;
   padding: 10px 8px;
 
-  @media screen and (min-width: 768px) {
-    padding: 10px 16px;
-  }
-
   @media screen and (min-width: 960px) {
-    backdrop-filter: ${({ scrolled }) => (scrolled ? 'blur(6px)' : 'initial')};
+    padding: 10px 16px;
   }
 `;
 
@@ -66,7 +58,7 @@ export const LogoLink = styled(NavLink)`
     color: #ffbf00;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     flex-basis: ${({ scrolled }) => (scrolled === 'true' ? '60px' : '80px')};
   }
 `;
