@@ -8,28 +8,22 @@ export const HeaderContainer = styled.header`
   left: 0;
   z-index: 1000;
 
-  background-color: #000;
-
-  box-shadow: ${({ scrolled }) =>
-    scrolled ? '0px -9px 8px 13px rgba(36, 36, 36, 0.82)' : 'none'};
-
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-
-  transition: ${createTransition(
-    ['background-color', 'border-color', 'box-shadow'],
-    'standart'
-  )};
-`;
-
-export const HeaderSizer = styled.div`
   display: flex;
   justify-content: space-between;
 
   padding: 10px 8px;
 
+  background-color: #000;
+
+  box-shadow: 0px -9px 8px 13px rgba(36, 36, 36, 0.82);
+
+  transition: ${createTransition(
+    ['background-color', 'border-color', 'box-shadow'],
+    'standart'
+  )};
+
   @media screen and (min-width: 960px) {
-    padding: 10px 16px;
+    padding: 10px 24px 10px 16px;
   }
 `;
 

@@ -38,6 +38,8 @@ body.modal {
 
 main {
   flex-grow: 1;
+
+  background-color: #fff;
 }
 
 h1,

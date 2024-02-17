@@ -3,7 +3,7 @@ import throttle from 'lodash.throttle';
 import { HeaderLinks } from '@/components';
 import { SpriteIcon } from '@/components/Shared';
 import { SCROLL_THROTTLE_DELAY } from '@/constants';
-import { HeaderContainer, HeaderSizer, LogoLink } from './Header.styled';
+import { HeaderContainer, LogoLink } from './Header.styled';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,19 +23,17 @@ export const Header = () => {
   }, []);
 
   return (
-    <HeaderContainer scrolled={isScrolled}>
-      <HeaderSizer>
-        <LogoLink
-          to="/"
-          onClickCapture={() => scroll({ top })}
-          aria-label="Логотип Sho-Maemo"
-          scrolled={isScrolled.toString()}
-        >
-          <SpriteIcon symbol="logo" />
-        </LogoLink>
+    <HeaderContainer id="header">
+      <LogoLink
+        to="/"
+        onClickCapture={() => scroll({ top })}
+        aria-label="Логотип Sho-Maemo"
+        scrolled={isScrolled.toString()}
+      >
+        <SpriteIcon symbol="logo" />
+      </LogoLink>
 
-        <HeaderLinks scrolled={isScrolled} />
-      </HeaderSizer>
+      <HeaderLinks scrolled={isScrolled} />
     </HeaderContainer>
   );
 };

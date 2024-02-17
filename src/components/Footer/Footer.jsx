@@ -18,7 +18,7 @@ export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <FooterContainer id="footer">
+    <FooterContainer>
       <div>
         <MobileTitle>Як нас знайти:</MobileTitle>
 
