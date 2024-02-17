@@ -28,4 +28,12 @@ export const ContainedButton = styled.button`
   &:is(:hover, :focus-visible) {
     background-color: #ffbf00;
   }
+
+  @media screen and (min-width: 960px) {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 22px;
+  }
 `;

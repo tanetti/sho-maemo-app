@@ -245,12 +245,28 @@ export const CaptionTitle = styled.h2`
   & > span {
     font-weight: 700;
   }
+
+  @media screen and (min-width: 960px) {
+    font-size: 28px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 
 export const CaptionList = styled.ul`
   line-height: 1.26;
 
   list-style: disc;
+
+  @media screen and (min-width: 960px) {
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 20px;
+  }
 `;
 
 export const CaptionItem = styled.li`
