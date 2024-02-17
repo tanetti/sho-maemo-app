@@ -12,7 +12,7 @@ export const Backdrop = styled.div`
   align-items: center;
 
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
 
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   visibility: ${({ isVisible }) => (isVisible ? 'visible' : 'hidden')};
@@ -32,7 +32,7 @@ export const Window = styled.div`
   display: flex;
 
   width: calc(100% - 30px);
-  max-height: calc(100dvh - 30px);
+  max-height: calc(100svh - 30px);
   padding: 12px 4px 0 12px;
 
   background-color: #fff;

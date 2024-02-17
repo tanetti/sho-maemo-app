@@ -1,4 +1,6 @@
-import { ContainedButton } from '../Shared';
+import { useState } from 'react';
+import { PrinterRequestModal } from '@/components';
+import { ContainedButton } from '@/components/Shared';
 import {
   Caption,
   CaptionItem,
@@ -11,40 +13,51 @@ import {
   SectionContainer,
 } from './PrinterSection.styled';
 
-export const PrinterSection = () => (
-  <SectionContainer>
-    <HeadContainer>
-      <ImageContainer />
+export const PrinterSection = () => {
+  const [isModalOpened, setIsModalOpened] = useState(false);
 
-      <DescriptionContainer>
-        <p>
-          Заправка та обслуговування
-          <br />
-          принтерів <span>Canon / HP</span>
-        </p>
-      </DescriptionContainer>
-    </HeadContainer>
+  return (
+    <SectionContainer>
+      <HeadContainer>
+        <ImageContainer />
 
-    <RequestContainer>
-      <Caption>
-        <CaptionTitle>
-          Топ <span>3 причини</span> звернутися до нас:
-        </CaptionTitle>
+        <DescriptionContainer>
+          <p>
+            Заправка та обслуговування
+            <br />
+            принтерів <span>Canon / HP</span>
+          </p>
+        </DescriptionContainer>
+      </HeadContainer>
 
-        <CaptionList>
-          <CaptionItem>
-            Ваш принтер друкує <b>блідно</b>
-          </CaptionItem>
+      <RequestContainer>
+        <Caption>
+          <CaptionTitle>
+            Топ <span>3 причини</span> звернутися до нас:
+          </CaptionTitle>
 
-          <CaptionItem>
-            Ваш принтер залишає <span>смуги</span> на папері
-          </CaptionItem>
+          <CaptionList>
+            <CaptionItem>
+              Ваш принтер друкує <b>блідно</b>
+            </CaptionItem>
 
-          <CaptionItem>Ви не хочете в цьому розбиратись</CaptionItem>
-        </CaptionList>
-      </Caption>
+            <CaptionItem>
+              Ваш принтер залишає <span>смуги</span> на папері
+            </CaptionItem>
 
-      <ContainedButton type="button">Записатися</ContainedButton>
-    </RequestContainer>
-  </SectionContainer>
-);
+            <CaptionItem>Ви не хочете в цьому розбиратись</CaptionItem>
+          </CaptionList>
+        </Caption>
+
+        <ContainedButton type="button" onClick={() => setIsModalOpened(true)}>
+          Записатися
+        </ContainedButton>
+
+        <PrinterRequestModal
+          isOpened={isModalOpened}
+          closeModal={() => setIsModalOpened(false)}
+        />
+      </RequestContainer>
+    </SectionContainer>
+  );
+};
