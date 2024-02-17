@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { createTransition } from '@/utilities';
 
 import PrinterWebp360x1 from '@/assets/printer/printer360x1.webp';
 import PrinterWebp360x2 from '@/assets/printer/printer360x2.webp';
@@ -34,10 +33,6 @@ export const SectionContainer = styled.section`
   min-height: 480px;
   height: calc(100svh - 80px);
 
-  /* will-change: height;
-
-  transition: ${createTransition('height', 'standart')}; */
-
   @media screen and (min-width: 960px) {
     min-height: 580px;
     height: calc(100svh - 100px);
@@ -53,6 +48,7 @@ export const HeadContainer = styled.div`
 
   @media screen and (min-width: 960px) {
     flex-direction: row;
+    justify-content: center;
   }
 `;
 
@@ -83,6 +79,8 @@ export const ImageContainer = styled.div`
   @media screen and (min-width: 960px) {
     flex-basis: 50%;
 
+    max-width: 640px;
+
     background-size: 640px;
     background-image: ${`url(${PrinterJpg640x1})`};
     background-image: ${`url(${PrinterWebp640x1})`};
@@ -93,17 +91,10 @@ export const ImageContainer = styled.div`
       background-image: ${`url(${PrinterJpg640x2})`};
       background-image: ${`url(${PrinterWebp640x2})`};
     }
-
-    @media (min-device-pixel-ratio: 3),
-      (min-resolution: 288dpi),
-      (min-resolution: 3dppx) {
-      background-image: ${`url(${PrinterJpg640x2})`};
-      background-image: ${`url(${PrinterWebp640x2})`};
-    }
   }
 `;
 
-export const DescriptionContainer = styled.p`
+export const DescriptionContainer = styled.div`
   flex-grow: 1;
   flex-basis: 30%;
 
@@ -112,12 +103,23 @@ export const DescriptionContainer = styled.p`
 
   text-align: center;
 
-  & > span {
+  & span {
     font-weight: 700;
   }
 
   @media screen and (min-width: 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-basis: 50%;
+
+    max-width: 640px;
+
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
   }
 `;
 

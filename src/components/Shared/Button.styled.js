@@ -7,7 +7,7 @@ export const ContainedButton = styled.button`
   min-width: 100px;
 
   margin-inline: auto;
-  padding: 9px 40px 8px 40px;
+  padding: 8px 40px;
 
   font-size: 18px;
   font-weight: 600;
@@ -23,14 +23,9 @@ export const ContainedButton = styled.button`
 
   text-transform: uppercase;
 
-  transition: ${createTransition(
-    ['transform', 'background-color'],
-    'standart'
-  )};
+  transition: ${createTransition('background-color', 'standart')};
 
   &:is(:hover, :focus-visible) {
     background-color: #ffbf00;
-
-    transform: scale(1.1);
   }
 `;

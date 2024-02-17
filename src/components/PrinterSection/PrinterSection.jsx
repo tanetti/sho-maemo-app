@@ -17,9 +17,11 @@ export const PrinterSection = () => (
       <ImageContainer />
 
       <DescriptionContainer>
-        Заправка та обслуговування
-        <br />
-        принтерів <span>Canon / HP</span>
+        <p>
+          Заправка та обслуговування
+          <br />
+          принтерів <span>Canon / HP</span>
+        </p>
       </DescriptionContainer>
     </HeadContainer>
 

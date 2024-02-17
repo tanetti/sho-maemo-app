@@ -47,7 +47,7 @@ main {
 
   padding-top: 80px;
 
-  background-color: #fff;
+  background-color: #fefefe;
 
   @media screen and (min-width: 960px) {
     padding-top: 100px;
