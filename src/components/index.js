@@ -6,3 +6,4 @@ export * from './LandingContent/LandingContent';
 export * from './PrinterSection/PrinterSection';
 export * from './PcSection/PcSection';
 export * from './PrinterRequestModal/PrinterRequestModal';
+export * from './PcRequestModal/PcRequestModal';

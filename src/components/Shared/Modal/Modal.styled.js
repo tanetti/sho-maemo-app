@@ -76,7 +76,7 @@ export const ContentContainer = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #fa5502;
+    background-color: #ffbf00;
 
     border-radius: 4px;
   }
