@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_URL } from '@/constants';
 
-export const useRequest = isActive => {
+export const usePrinterRequest = isActive => {
   const [isPending, setIsPending] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -21,7 +21,7 @@ export const useRequest = isActive => {
     setIsError(false);
 
     try {
-      await axios.post(`${API_URL}/request`, data);
+      await axios.post(`${API_URL}/printer-request`, data);
 
       setIsPending(false);
       setIsSuccess(true);

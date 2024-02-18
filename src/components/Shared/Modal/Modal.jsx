@@ -33,7 +33,6 @@ export const Modal = ({
   isError,
   errorCaption,
   errorDescription,
-  focusTrigger,
   title,
   children,
 }) => {
@@ -132,7 +131,6 @@ export const Modal = ({
   }, [
     closeModal,
     isRendered,
-    focusTrigger,
     isControlsDisabled,
     isLoading,
     isSuccess,
@@ -230,5 +228,4 @@ Modal.propTypes = {
   errorDescription: PropTypes.string,
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  scrollContainerRef: PropTypes.object,
 };

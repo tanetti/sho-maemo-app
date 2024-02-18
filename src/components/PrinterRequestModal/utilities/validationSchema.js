@@ -15,10 +15,7 @@ yup.addMethod(yup.string, 'lengthIfNotEmpty', function (param, errorMessage) {
 });
 
 export const validationSchema = yup
-  .object()
-  .shape({
-    section: yup.string().required(),
-
+  .object({
     name: yup
       .string()
       .trim()
@@ -27,36 +24,12 @@ export const validationSchema = yup
       .max(30, "Задовге ім'я")
       .required("Вкажіть ім'я"),
 
-    surename: yup
-      .string()
-      .trim()
-      .lengthIfNotEmpty(2, 'Закоротке прізвище')
-      .transform(capitalize)
-      .max(30, 'Задовге прізвище')
-      .required('Вкажіть прізвище'),
-
     phone: yup
       .string()
       .trim()
-      .lengthIfNotEmpty(19, 'Невірний формат')
+      .lengthIfNotEmpty(19, 'Неправильний формат')
       .required('Вкажіть номер телефону'),
 
-    birthdate: yup.date().required('Вкажіть дату народження'),
-
-    height: yup
-      .number()
-      .nullable()
-      .min(60, 'Замалий зріст')
-      .max(250, 'Завеликий зріст')
-      .required('Вкажіть зріст'),
-
-    weight: yup
-      .number()
-      .nullable()
-      .min(20, 'Замалa вага')
-      .max(150, 'Завелика вага')
-      .required('Вкажіть вагу'),
-
-    medical: yup.bool().required(),
+    printer: yup.string().trim().transform(capitalize),
   })
   .required();

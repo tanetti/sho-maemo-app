@@ -32,6 +32,7 @@ export const Window = styled.div`
   display: flex;
 
   width: calc(100% - 30px);
+  max-width: 420px;
   max-height: calc(100svh - 30px);
   padding: 12px 4px 0 12px;
 
@@ -50,14 +51,11 @@ export const Window = styled.div`
   transition: ${createTransition(['transform', 'opacity'], 'standart')};
 
   @media screen and (min-width: 480px) {
-    width: 450px;
+    padding: 16px 6px 0 16px;
   }
 
   @media screen and (min-width: 768px) {
-    width: 520px;
     max-height: calc(100dvh - 40px);
-
-    padding: 16px 6px 0 16px;
   }
 `;
 
@@ -92,7 +90,7 @@ export const ContentContainer = styled.div`
     border-radius: 4px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     padding: 0 10px 18px 0;
 
     &::-webkit-scrollbar {
@@ -138,9 +136,9 @@ export const Title = styled.h3`
   padding: 0 40px 15px 40px;
 
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
 
-  color: #fa5502;
+  color: #212121;
 
   background: linear-gradient(to top, #ffffff00, #ffffffff 10px, #ffffffff);
 
@@ -168,8 +166,8 @@ export const BackgroundContainer = styled.div`
 
 export const CloseButton = styled.button`
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   z-index: 30;
 
   display: flex;
@@ -186,12 +184,10 @@ export const CloseButton = styled.button`
 
   cursor: pointer;
 
-  transition: ${createTransition(['color', 'transform'], 'standart')};
+  transition: ${createTransition('color', 'standart')};
 
   &:is(:hover, :focus) {
-    color: #fa5502;
-
-    transform: scale(1.2);
+    color: #ffbf00;
   }
 
   & > svg {
@@ -211,7 +207,7 @@ const ResultContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 
   width: 100%;
   height: 100%;
@@ -233,7 +229,7 @@ const ResultContainer = styled.div`
 export const LoadingContainer = styled(ResultContainer)`
   z-index: 40;
 
-  color: #fa7734;
+  color: #ffbf00;
   background-color: #ffffffe1;
 
   text-shadow: 0px 0px 4px rgba(255, 255, 255, 1);
@@ -269,14 +265,14 @@ export const Loader = styled.div`
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 
-    filter: drop-shadow(0 0 1rem #fa5502ce);
+    filter: drop-shadow(0 0 1rem #ffbf00ce);
   }
 
   &:before {
     width: 100%;
     padding-bottom: 100%;
 
-    box-shadow: inset 0 0 0 1.7rem #fa5502;
+    box-shadow: inset 0 0 0 1.7rem #ffbf00;
 
     animation-name: pulsA;
   }
@@ -285,7 +281,7 @@ export const Loader = styled.div`
     width: calc(100% - 1.7rem * 2);
     padding-bottom: calc(100% - 1.7rem * 2);
 
-    box-shadow: 0 0 0 0 #fa5502;
+    box-shadow: 0 0 0 0 #ffbf00;
 
     animation-name: pulsB;
   }
@@ -296,13 +292,13 @@ export const Loader = styled.div`
 
   @keyframes pulsA {
     0% {
-      box-shadow: inset 0 0 0 1.7rem #fa5502;
+      box-shadow: inset 0 0 0 1.7rem #ffbf00;
 
       opacity: 1;
     }
     50%,
     100% {
-      box-shadow: inset 0 0 0 0 #fa5502;
+      box-shadow: inset 0 0 0 0 #ffbf00;
 
       opacity: 0;
     }
@@ -311,12 +307,12 @@ export const Loader = styled.div`
   @keyframes pulsB {
     0%,
     50% {
-      box-shadow: 0 0 0 0 #fa5502;
+      box-shadow: 0 0 0 0 #ffbf00;
 
       opacity: 0;
     }
     100% {
-      box-shadow: 0 0 0 1.7rem #fa5502;
+      box-shadow: 0 0 0 1.7rem #ffbf00;
 
       opacity: 1;
     }
@@ -399,23 +395,21 @@ export const CloseOutlineButton = styled.button`
   color: #818181;
   background-color: transparent;
 
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   border-radius: 8px;
   border-color: #818181;
 
   cursor: pointer;
 
-  transition: ${createTransition(
-    ['color', 'background-color', 'border-color'],
-    'standart'
-  )};
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  transition: ${createTransition(['color', 'border-color'], 'standart')};
 
   &:is(:hover, :focus) {
-    color: #fa5502;
-    background-color: #00000009;
+    color: #000;
 
-    border-color: #fa5502;
+    border-color: #ffbf00;
   }
 
   &:disabled {

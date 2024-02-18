@@ -49,7 +49,13 @@ export const PrinterSection = () => {
           </CaptionList>
         </Caption>
 
-        <ContainedButton type="button" onClick={() => setIsModalOpened(true)}>
+        <ContainedButton
+          type="button"
+          aria-expanded={isModalOpened}
+          aria-controls="printer_request_modal"
+          aria-haspopup="dialog"
+          onClick={() => setIsModalOpened(true)}
+        >
           Записатися
         </ContainedButton>
 
